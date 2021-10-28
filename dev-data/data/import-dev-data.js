@@ -1,34 +1,33 @@
 const fs = require('fs');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const Tour = require('./../../models/tourModel');
+const Book = require('../../models/bookModel');
 
 dotenv.config({ path: './config.env' });
 
-// const DB = process.env.DATABASE.replace(
-//   '<PASSWORD>',
-//   process.env.DATABASE_PASSWORD
-// );
+const DB = process.env.DATABASE.replace(
+  '<PASSWORD>',
+  process.env.DATABASE_PASSWORD
+);
 
-const LDB = process.env.DATABASE_LOCAL;
+// const LDB = process.env.DATABASE_LOCAL;
 
 mongoose
-  .connect(LDB, {
+  .connect(DB, {
     useNewUrlParser: true,
     useCreateIndex: true,
-    useFindAndModify: false
+    useFindAndModify: false,
+    useUnifiedTopology: true
   })
   .then(() => console.log('DB connection successful!'));
 
 // READ JSON FILE
-const tours = JSON.parse(
-  fs.readFileSync(`${__dirname}/tours-simple.json`, 'utf-8')
-);
+const book = JSON.parse(fs.readFileSync(`${__dirname}/book.json`, 'utf-8'));
 
 // IMPORT DATA INTO DB
 const importData = async () => {
   try {
-    await Tour.create(tours);
+    await Book.create(book);
     console.log('Data successfully loaded!');
   } catch (err) {
     console.log(err);
@@ -39,7 +38,7 @@ const importData = async () => {
 // DELETE ALL DATA FROM DB
 const deleteData = async () => {
   try {
-    await Tour.deleteMany();
+    await Book.deleteMany();
     console.log('Data successfully deleted!');
   } catch (err) {
     console.log(err);
