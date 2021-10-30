@@ -9,14 +9,14 @@ exports.getAllBooks = catchAsync(async (req, res) => {
     .sort()
     .limitFields()
     .paginate();
-  const books = await features.query;
+  const book = await features.query;
 
   // SEND RESPONSE
   res.status(200).json({
     status: 'success',
-    results: books.length,
+    results: book.length,
     data: {
-      books
+      book
     }
   });
 });
