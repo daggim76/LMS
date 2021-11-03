@@ -3,10 +3,15 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const Book = require('../../models/bookModel');
 
-dotenv.config({ path: './config.env' });
+process.on('uncaughtException', err => {
+  console.log('UNCAUGHT EXCEPTION! 💥 Shutting down...');
+  console.log(err.name, err.message);
+  process.exit(1);
+});
 
+dotenv.config({ path: './config.env' });
 const DB = process.env.DATABASE.replace(
-  '<PASSWORD>',
+  '<password>',
   process.env.DATABASE_PASSWORD
 );
 
@@ -22,7 +27,7 @@ mongoose
   .then(() => console.log('DB connection successful!'));
 
 // READ JSON FILE
-const book = JSON.parse(fs.readFileSync(`${__dirname}/book.json`, 'utf-8'));
+const book = JSON.parse(fs.readFileSync(`${__dirname}/books.json`, 'utf-8'));
 
 // IMPORT DATA INTO DB
 const importData = async () => {

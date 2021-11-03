@@ -9,7 +9,7 @@ const router = express.Router();
 //   .route('/top-5-books')
 //   .get(bookController.aliasTopBooks, bookController.getAllBooks);
 
-router.route('/book-stats').get(bookController.getBookStats);
+// router.route('/book-stats').get(bookController.getBookStats);
 // router.route('/monthly-plan/:year').get(bookController.getMonthlyPlan);
 
 router
