@@ -869,7 +869,7 @@
     "name": "",
     "ISBN": "0746040911",
     "quantity": 1,
-    "year": ,
+    "year": 1 ,
     "department": "Computer Science",
     "author": ""
   },
@@ -957,7 +957,7 @@
     "name": "",
     "ISBN": "0619187190",
     "quantity": 1,
-    "year": ,
+    "year": 1,
     "department": "Computer Science",
     "author": ""
   },
@@ -1357,7 +1357,7 @@
     "name": "",
     "ISBN": "0072465638",
     "quantity": 1,
-    "year": ,
+    "year": 1,
     "department": "Computer Science",
     "author": ""
   },
@@ -1453,7 +1453,7 @@
     "name": "",
     "ISBN": "0072472642",
     "quantity": 2,
-    "year": ,
+    "year": 1,
     "department": "Computer Science",
     "author": ""
   },
@@ -1517,7 +1517,7 @@
     "name": "",
     "ISBN": "0805306080",
     "quantity": 1,
-    "year": ,
+    "year": 1,
     "department": "Computer Science",
     "author": ""
   },
@@ -1525,7 +1525,7 @@
     "name": "computer complexity",
     "ISBN": "",
     "quantity": 1,
-    "year": ,
+    "year": 1,
     "department": "Computer Science",
     "author": ""
   },
@@ -1541,7 +1541,7 @@
     "name": "",
     "ISBN": "0072395591",
     "quantity": 1,
-    "year": ,
+    "year": 1,
     "department": "Computer Science",
     "author": ""
   },
@@ -1557,7 +1557,7 @@
     "name": "",
     "ISBN": "97881317020505",
     "quantity": 1,
-    "year": ,
+    "year": 1,
     "department": "Computer Science",
     "author": ""
   },
@@ -1565,7 +1565,7 @@
     "name": "",
     "ISBN": "0071008942",
     "quantity": 1,
-    "year": ,
+    "year": 1,
     "department": "Computer Science",
     "author": ""
   },
@@ -1600,5 +1600,5 @@
     "year": 2008,
     "department": "Computer Science",
     "author": ""
-  },
+  }
 ]
